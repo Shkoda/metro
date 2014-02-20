@@ -16,6 +16,12 @@
     -fx-text-fill: black;
 }
 
+.label {
+    -fx-font-size: 38pt;
+    -fx-font-family: "Segoe UI Light";
+    -fx-text-fill: black;
+}
+
 .item-title {
     -fx-font-size: 11pt;
     -fx-font-family: "Segoe UI Semibold";
@@ -31,8 +37,8 @@
  ******************************************************************************/
 
 .button {
-    -fx-padding: 5 22 5 22;
-    -fx-border-style: null;
+    /*-fx-padding: 5 22 5 22;*/
+    /*-fx-border-style: null;*/
     -fx-background-radius: 0;
 
     -fx-background-color: #f7f7f7;
@@ -40,6 +46,12 @@
     -fx-font-family: "Segoe UI", Helvetica, Arial, sans-serif;
     -fx-font-size: 11pt;
     -fx-text-fill: black;
+
+    /*-fx-focus-color: transparent;*/
+}
+
+.button:selected {
+    -fx-border-color: rgba(255, 255, 255, 0);
 }
 
 .button:hover {
@@ -52,7 +64,7 @@
 }
 
 .button:focused {
-    -fx-border-color: black;
+    -fx-border-color: rgba(0, 0, 0, 0);
     -fx-border-width: 1;
     -fx-border-style: segments(1, 1);
     -fx-background-insets: 0 0 0 0, 0, 1, 2;
@@ -650,14 +662,9 @@
  *                                                                             *
  ******************************************************************************/
 
-#FileLinkButton {
-    -fx-graphic: url("image/icons/file-small.png");
-}
-
-#SettingsLinkButton {
-    -fx-graphic: url("image/icons/settings.png");
-    -fx-min-height: 100;
-}
+/*#MenuButton {*/
+/*-fx-graphic: url("image/menu/menu2.png");*/
+/*}*/
 
 #EditTasksLinkButton {
     -fx-graphic: url("image/icons/link_task.png");
@@ -673,4 +680,36 @@
 
 #StatisticsLinkButton {
     -fx-graphic: url("image/icons/statistics-small.png");
+}
+
+#BackButton {
+    -fx-graphic: url("image/menu/back-small.png");
+    -fx-background-color: transparent;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+}
+
+#BackButton .button:hover {
+    -fx-background-color: #18b0ff;
+}
+
+#BackButton .button:pressed, .button:default:hover:pressed {
+    -fx-background-color: #0ece52;
+    -fx-text-fill: white;
+}
+
+#SettingsButton {
+    -fx-graphic: url("image/menu/settings.png");
+    -fx-background-color: transparent;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+}
+
+#SettingsButton .button:hover {
+    -fx-background-color: #18b0ff;
+}
+
+#SettingsButton .button:pressed, .button:default:hover:pressed {
+    -fx-background-color: #0ece52;
+    -fx-text-fill: white;
 }
