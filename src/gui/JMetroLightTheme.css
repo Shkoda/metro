@@ -17,9 +17,13 @@
 }
 
 .label {
-    -fx-font-size: 38pt;
+    -fx-font-size: 34pt;
     -fx-font-family: "Segoe UI Light";
     -fx-text-fill: black;
+}
+
+.menu-item {
+    -fx-font-size: 9pt;
 }
 
 .item-title {
@@ -712,7 +716,7 @@
 }
 
 
-#NextButton .button {
+#NextButton  {
     -fx-background-image: url("image/menu/next_page.png");
     -fx-background-size: 20 20;
     -fx-background-repeat: no-repeat;

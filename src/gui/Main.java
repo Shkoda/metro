@@ -1,5 +1,6 @@
 package gui;
 
+import data.DataHolder;
 import gui.stage_elements.page.Page;
 import gui.stage_elements.page.PageHolder;
 import javafx.application.Application;
@@ -16,7 +17,9 @@ import static gui.config.Config.*;
 public class Main extends Application {
     private static Stage stage;
     private static AnchorPane root;
-    public static PageHolder pageHolder = new PageHolder();
+    private DataHolder dataHolder;
+
+    public static  PageHolder pageHolder ;
 
     public static void main(String[] args) {
         Application.launch(args);
@@ -34,6 +37,9 @@ public class Main extends Application {
         Scene scene = new Scene(root, SCENE_WIDTH, SCENE_HEIGHT, true);
         stage.setScene(scene);
         scene.getStylesheets().add(Main.class.getResource("JMetroLightTheme.css").toExternalForm());
+
+        dataHolder = new DataHolder();
+        pageHolder = new PageHolder(dataHolder, stage);
         pageHolder.init(root);
 
         goTo(pageHolder.START_PAGE);

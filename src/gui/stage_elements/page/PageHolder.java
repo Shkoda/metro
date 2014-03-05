@@ -1,8 +1,10 @@
 package gui.stage_elements.page;
 
+import data.DataHolder;
 import gui.stage_elements.workarea.*;
 import javafx.beans.property.ReadOnlyDoubleProperty;
 import javafx.scene.layout.AnchorPane;
+import javafx.stage.Stage;
 
 import java.lang.reflect.Array;
 import java.util.ArrayList;
@@ -19,12 +21,12 @@ public class PageHolder {
     private List<Page> pageSequence;
 
 
-    public PageHolder() {
-        START_PAGE = new Page("Start Page");
-        EDIT_TASKS_PAGE = new Page("Edit MPP");
-        EDIT_MPP_PAGE = new Page("Edit Task Graph");
-        MODELLER_PAGE = new Page("Modeller");
-        STATISTICS_PAGE = new Page("Statistics");
+    public PageHolder(DataHolder dataHolder, Stage stage) {
+        START_PAGE = new Page("Start Page", dataHolder, stage);
+        EDIT_TASKS_PAGE = new Page("Edit MPP", dataHolder, stage);
+        EDIT_MPP_PAGE = new Page("Edit Task Graph", dataHolder, stage);
+        MODELLER_PAGE = new Page("Modeller", dataHolder, stage);
+        STATISTICS_PAGE = new Page("Statistics", dataHolder, stage);
 
         pageSequence = Arrays.asList(START_PAGE, EDIT_MPP_PAGE, EDIT_TASKS_PAGE, MODELLER_PAGE, STATISTICS_PAGE);
     }

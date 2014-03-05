@@ -1,5 +1,8 @@
 package gui.config;
 
+import com.sun.glass.ui.CommonDialogs;
+import javafx.stage.FileChooser;
+
 /**
  * Created by Nightingale on 16.02.14.
  */
@@ -23,5 +26,9 @@ public class Config {
 
     public static final int PROCESSOR_ELEMENT_WIDTH = 40;
     public static final int PROCESSOR_ELEMENT_HEIGHT = 40;
+
+    public static final String PROJECT_FILE_EXTENSION = "pzcs";
+    public static final String EXTENSION_DESCRIPTION = "project file (*." + PROJECT_FILE_EXTENSION + ")";
+    public static final FileChooser.ExtensionFilter PROJECT_FILE_EXTENSION_FILTER = new FileChooser.ExtensionFilter(EXTENSION_DESCRIPTION, "*." + PROJECT_FILE_EXTENSION);
 
 }

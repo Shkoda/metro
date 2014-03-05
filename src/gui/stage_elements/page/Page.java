@@ -1,5 +1,6 @@
 package gui.stage_elements.page;
 
+import data.DataHolder;
 import gui.Main;
 import gui.config.Config;
 import gui.stage_elements.workarea.WorkPane;
@@ -7,6 +8,7 @@ import javafx.event.EventHandler;
 import javafx.scene.control.Button;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.GridPane;
+import javafx.stage.Stage;
 
 /**
  * Created by Nightingale on 20.02.14.
@@ -16,9 +18,9 @@ public class Page {
     private GridPane template;
     private WorkPane workPane;
 
-    public Page(String name) {
+    public Page(String name, DataHolder dataHolder, Stage stage) {
         this.name = name;
-        template = PageTemplateCreator.get(name);    //todo remove emp code
+        template = PageTemplateCreator.get(name, dataHolder, stage);    //todo remove emp code
     }
 
     public void addBackButton(){
