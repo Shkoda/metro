@@ -31,6 +31,20 @@ public class Page {
         template.add(backButton, 0, 0);
     }
 
+    public void addNavigationButton(final Page goToPage, boolean isNextPage){
+        String fxId = isNextPage ? "NextButton": "PreviousButton";
+        Button button = PageTemplateCreator.createButton(fxId,  Config.PREVIOUS_NEXT_BUTTON_SIZE);
+        button.setOnMouseClicked(new EventHandler<MouseEvent>() {
+            public void handle(MouseEvent me) {
+                Main.goTo(goToPage);
+            }
+        });
+        int column = isNextPage ? 2 : 0;
+        template.add(button, column, 1);
+    }
+
+
+
     public void setWorkPane(WorkPane workArea) {
         this.workPane = workArea;
         template.add(workArea.getRoot(), 1,1);

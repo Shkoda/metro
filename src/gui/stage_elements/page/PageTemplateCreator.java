@@ -73,6 +73,7 @@ public class PageTemplateCreator {
 
         button.setMinSize(size, size);
         button.setPrefSize(size, size);
+        button.setMaxSize(size, size);
 
         button.setId(fxId);
         GridPane.setHalignment(button, HPos.CENTER);

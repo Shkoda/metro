@@ -29,88 +29,33 @@ public class EditorPane extends WorkPane {
     private GridPane root;
     private ToolBar statusBar;
     private ScrollPane canvasContainer;
-    private Pane contentArea;
 
-    private ToggleButton cursorButton;
-    private ToggleButton addButton;
-    private ToggleButton linkButton;
-    private Button checkButton;
+    protected ToggleButton cursorButton;
+    protected ToggleButton addButton;
+    protected ToggleButton linkButton;
+    protected Button checkButton;
 
-    private Pane canvas;
-    private double initX;
-    private double initY;
-    private Point2D dragAnchor;
 
     public EditorPane(String cursorButtonId, String addButtonId, String linkButtonId, String checkButtonId) {
         root = new GridPane();
         setConstraints();
         addToolBar(cursorButtonId, addButtonId, linkButtonId, checkButtonId);
-
-        canvasContainer = new ScrollPane();
-        canvasContainer.setHbarPolicy(ScrollPane.ScrollBarPolicy.AS_NEEDED);
-        canvasContainer.setVbarPolicy(ScrollPane.ScrollBarPolicy.AS_NEEDED);
-
+        addCanvasContainer();
         root.setGridLinesVisible(true);
         newCanvas();
     }
 
+
     public void newCanvas() {
+        canvasContainer.setContent(new Canvas(this).get());
+    }
 
-
+    private void addCanvasContainer() {
+        canvasContainer = new ScrollPane();
+        canvasContainer.setHbarPolicy(ScrollPane.ScrollBarPolicy.AS_NEEDED);
+        canvasContainer.setVbarPolicy(ScrollPane.ScrollBarPolicy.AS_NEEDED);
         root.add(canvasContainer, 0, 2);
 
-
-        canvas = new Pane();
-        Rectangle visibleCanvas = RectangleBuilder.create()
-                .width(1000).height(1000)
-                .fill(Color.AZURE)
-                .stroke(Color.BLACK)
-                .build();
-
-        canvas.getChildren().setAll(visibleCanvas);
-
-        canvas.setOnMouseClicked(new EventHandler<MouseEvent>() {
-            public void handle(MouseEvent me) {
-                if (addButton.isSelected()) {
-                    ProcessorElement processorElement = new ProcessorElement();
-
-                    final Node node = processorElement.getDrawable();
-                    node.setTranslateX(me.getX());
-                    node.setTranslateY(me.getY());
-
-                    node.setOnMousePressed(new EventHandler<MouseEvent>() {
-                        public void handle(MouseEvent me) {
-                            //when mouse is pressed, store initial position
-                            System.out.println("press");
-                            initX = node.getTranslateX();
-                            initY = node.getTranslateY();
-                            dragAnchor = new Point2D(me.getSceneX(), me.getSceneY());
-
-                        }
-                    });
-
-                    node.setOnMouseDragged(new EventHandler<MouseEvent>() {
-                        public void handle(MouseEvent me) {
-
-                            double dragX = me.getSceneX() - dragAnchor.getX();
-                            double dragY = me.getSceneY() - dragAnchor.getY();
-                            //calculate new position of the circle
-                            double newXPosition = initX + dragX;
-                            double newYPosition = initY + dragY;
-                            node.setTranslateX(newXPosition);
-                            node.setTranslateY(newYPosition);
-
-                        }
-                    });
-                    canvas.getChildren().add(node);
-                }
-
-            }
-        });
-
-
-        //variables for storing initial position before drag of circle
-        canvasContainer.setContent(canvas);
     }
 
     private void addToolBar(String cursorButtonId, String addButtonId, String linkButtonId, String checkButtonId) {

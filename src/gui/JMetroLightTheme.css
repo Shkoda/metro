@@ -703,20 +703,23 @@
     -fx-text-fill: white;
 }
 
-/*#page-toolbar #SettingsButton {*/
+#PreviousButton {
+    -fx-background-image: url("image/menu/previous_page.png");
+    -fx-background-size: 20 20;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+    -fx-background-color: transparent;
+}
 
-    /*-fx-background-image: url("scene_elements/images/settings.png");*//**//*--------------------------<<<<<*/
-    /*-fx-border-color: transparent transparent transparent #6e737d , transparent transparent transparent rgba(255,255,255,0.3);*/
-    /*-fx-border-insets: 0, 0 1 0 1;*/
-/*}*/
 
-/*#SettingsButton:hover{*/
-    /*-fx-effect: dropshadow( three-pass-box , rgba(255,255,255,0.6) , 10, 0.5 , 0 , 0 );*/
-/*}*/
+#NextButton .button {
+    -fx-background-image: url("image/menu/next_page.png");
+    -fx-background-size: 20 20;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+    -fx-background-color: transparent;
 
-/*#SettingsButton:selected{*/
-    /*-fx-effect: dropshadow( three-pass-box , rgba(255, 72, 116, 0.60), 10, 0.5 , 0 , 0 );*/
-/*}*/
+}
 
 
 #page-toolbar .button:focused, #page-toolbar #SettingsButton:focused  {
@@ -729,24 +732,6 @@
     -fx-background-size: 40 40;
 }
 
-
-/*#SettingsButton {*/
-    /*-fx-graphic: url("image/menu/settings.png");*/
-    /*-fx-background-color: transparent;*/
-    /*-fx-background-repeat: no-repeat;*/
-    /*-fx-background-position: center;*/
-    /*-fx-background-size: 30 30;*/
-/*}*/
-
-
-/*#SettingsButton .button:hover {*/
-    /*-fx-background-color: #18b0ff;*/
-/*}*/
-
-/*#SettingsButton .button:pressed, .button:default:hover:pressed {*/
-    /*-fx-background-color: #0ece52;*/
-    /*-fx-text-fill: white;*/
-/*}*/
 
 #SettingsButton {
     -fx-background-image: url("image/menu/settings.png");

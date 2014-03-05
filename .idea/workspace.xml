@@ -26,13 +26,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="162f246a-54a9-456c-8cf5-75ccc20fc9ad" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/gui/image/elements/processor.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/gui/stage_elements/workarea/Canvas.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/gui/stage_elements/editor_elements/EditorElement.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/gui/stage_elements/editor_elements/ProcessorElement.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/gui/redactor/DataHolder.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/gui/stage_elements/workarea/Canvas.java" afterPath="$PROJECT_DIR$/src/gui/stage_elements/workarea/Canvas.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/gui/config/Config.java" afterPath="$PROJECT_DIR$/src/gui/config/Config.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/gui/stage_elements/workarea/EditorPane.java" afterPath="$PROJECT_DIR$/src/gui/stage_elements/workarea/EditorPane.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/gui/stage_elements/workarea/StartPagePane.java" afterPath="$PROJECT_DIR$/src/gui/stage_elements/workarea/StartPagePane.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/gui/JMetroLightTheme.css" afterPath="$PROJECT_DIR$/src/gui/JMetroLightTheme.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/gui/stage_elements/page/Page.java" afterPath="$PROJECT_DIR$/src/gui/stage_elements/page/Page.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/gui/stage_elements/page/PageHolder.java" afterPath="$PROJECT_DIR$/src/gui/stage_elements/page/PageHolder.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/gui/stage_elements/page/PageTemplateCreator.java" afterPath="$PROJECT_DIR$/src/gui/stage_elements/page/PageTemplateCreator.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="metro.iws" />
@@ -97,74 +98,42 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="EditorElement.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/gui/stage_elements/editor_elements/EditorElement.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="22" selection-start="214" selection-end="214" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="306">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ProcessorElement.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/gui/stage_elements/editor_elements/ProcessorElement.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="31" column="68" selection-start="910" selection-end="910" vertical-scroll-proportion="0.0" vertical-offset="380" max-vertical-offset="1088">
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1278#1499#0" expanded="true" />
-                <element signature="e#1488#1489#0" expanded="true" />
-                <element signature="e#1535#1749#0" expanded="true" />
-                <element signature="e#1738#1739#0" expanded="true" />
-                <element signature="e#1805#1806#0" expanded="true" />
-                <element signature="e#1833#1834#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Page.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/gui/stage_elements/page/Page.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="33" column="34" selection-start="989" selection-end="989" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="680">
+            <state line="24" column="53" selection-start="654" selection-end="654" vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="918">
               <folding>
                 <element signature="e#746#905#0" expanded="true" />
                 <element signature="e#894#895#0" expanded="true" />
+                <element signature="e#1232#1373#0" expanded="true" />
+                <element signature="e#1362#1363#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="EditorPane.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/gui/stage_elements/workarea/EditorPane.java">
+      <file leaf-file-name="PageTemplateCreator.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/gui/stage_elements/page/PageTemplateCreator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="53" column="20" selection-start="1736" selection-end="1736" vertical-scroll-proportion="0.6878531" vertical-offset="414" max-vertical-offset="3162">
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#2135#3800#0" expanded="true" />
-                <element signature="e#3789#3790#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Config.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/gui/config/Config.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="28" selection-start="718" selection-end="718" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="527">
+            <state line="60" column="33" selection-start="1982" selection-end="1982" vertical-scroll-proportion="0.0" vertical-offset="714" max-vertical-offset="1462">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Canvas.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/gui/stage_elements/workarea/Canvas.java">
+      <file leaf-file-name="JMetroLightTheme.css" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/gui/JMetroLightTheme.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="19" selection-start="104" selection-end="104" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="221">
+            <state line="723" column="0" selection-start="20452" selection-end="20452" vertical-scroll-proportion="0.6158192" vertical-offset="11855" max-vertical-offset="13192">
               <folding />
             </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="next_page.png" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/gui/image/menu/next_page.png">
+          <provider selected="true" editor-type-id="images">
+            <state />
           </provider>
         </entry>
       </file>
@@ -181,7 +150,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/gui/stage_elements/pages/WorkPagePattern.java" />
         <option value="$PROJECT_DIR$/src/gui/stage_elements/pages/WorkPageGrid.java" />
         <option value="$PROJECT_DIR$/src/gui/stage_elements/pages/template/WorkPageGrid.java" />
         <option value="$PROJECT_DIR$/src/gui/stage_elements/pages/custom/CustomControl.java" />
@@ -215,23 +183,24 @@
         <option value="$PROJECT_DIR$/src/gui/stage_elements/pages/template/PageTemplateCreator.java" />
         <option value="$PROJECT_DIR$/src/gui/stage_elements/pages/template/workarea/StartPagePane.java" />
         <option value="$PROJECT_DIR$/src/gui/stage_elements/pages/Pages.java" />
-        <option value="$PROJECT_DIR$/src/gui/JMetroLightTheme.css" />
         <option value="$PROJECT_DIR$/src/gui/stage_elements/pages/PageNewEdition.java" />
         <option value="$PROJECT_DIR$/src/gui/stage_elements/pages/Page.java" />
         <option value="$PROJECT_DIR$/src/gui/stage_elements/pages/template/EditorAreaTemplate.java" />
         <option value="$PROJECT_DIR$/src/gui/temp/PageTemplateCreator.java" />
         <option value="$PROJECT_DIR$/src/gui/temp/Page.java" />
         <option value="$PROJECT_DIR$/src/gui/stage_elements/Page.java" />
-        <option value="$PROJECT_DIR$/src/gui/stage_elements/page/Page.java" />
         <option value="$PROJECT_DIR$/src/gui/stage_elements/page/Pages.java" />
-        <option value="$PROJECT_DIR$/src/gui/stage_elements/page/PageTemplateCreator.java" />
-        <option value="$PROJECT_DIR$/src/gui/stage_elements/page/PageHolder.java" />
         <option value="$PROJECT_DIR$/src/gui/Main.java" />
         <option value="$PROJECT_DIR$/src/gui/stage_elements/workarea/StartPagePane.java" />
         <option value="$PROJECT_DIR$/src/gui/stage_elements/editor_elements/EditorElement.java" />
+        <option value="$PROJECT_DIR$/src/gui/stage_elements/editor_elements/ProcessorElement.java" />
+        <option value="$PROJECT_DIR$/src/gui/stage_elements/workarea/Canvas.java" />
         <option value="$PROJECT_DIR$/src/gui/stage_elements/workarea/EditorPane.java" />
         <option value="$PROJECT_DIR$/src/gui/config/Config.java" />
-        <option value="$PROJECT_DIR$/src/gui/stage_elements/editor_elements/ProcessorElement.java" />
+        <option value="$PROJECT_DIR$/src/gui/stage_elements/page/Page.java" />
+        <option value="$PROJECT_DIR$/src/gui/stage_elements/page/PageHolder.java" />
+        <option value="$PROJECT_DIR$/src/gui/stage_elements/page/PageTemplateCreator.java" />
+        <option value="$PROJECT_DIR$/src/gui/JMetroLightTheme.css" />
       </list>
     </option>
   </component>
@@ -276,110 +245,6 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="metro" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="&lt; 1.7 &gt;" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="metro" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="&lt; 1.7 &gt;" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="jfxrt.jar" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="metro" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="&lt; 1.7 &gt;" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="jfxrt.jar" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="javafx" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="metro" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="&lt; 1.7 &gt;" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="jfxrt.jar" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="javafx" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="scene" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="metro" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="&lt; 1.7 &gt;" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="jfxrt.jar" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="javafx" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="scene" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="shape" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -528,6 +393,28 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="redactor" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="metro" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="metro" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gui" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="image" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -554,7 +441,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="elements" />
+              <option name="myItemId" value="menu" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -890,12 +777,12 @@
       <workItem from="1393010202261" duration="593000" />
       <workItem from="1393188052778" duration="7085000" />
       <workItem from="1393760235415" duration="7893000" />
-      <workItem from="1394014692012" duration="8268000" />
+      <workItem from="1394014692012" duration="11205000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="65512000" />
+    <option name="totallyTimeSpent" value="68449000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -980,27 +867,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/gui/stage_elements/page/PageTemplateCreator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="54" column="46" selection-start="1982" selection-end="1982" vertical-scroll-proportion="0.0" vertical-offset="918" max-vertical-offset="1598">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/gui/JMetroLightTheme.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="478" column="13" selection-start="13420" selection-end="13424" vertical-scroll-proportion="0.0" vertical-offset="7854" max-vertical-offset="11662" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/gui/stage_elements/workarea/StartPagePane.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="43" selection-start="478" selection-end="478" vertical-scroll-proportion="0.0" vertical-offset="340" max-vertical-offset="1054">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/gui/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="40" column="14" selection-start="1175" selection-end="1175" vertical-scroll-proportion="0.0" vertical-offset="680" max-vertical-offset="952">
@@ -1147,11 +1013,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/gui/image/menu/settings.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/gui/stage_elements/workarea/ModellerPane.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="17" column="3" selection-start="423" selection-end="423" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="425">
@@ -1175,34 +1036,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/gui/image/menu/back.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/gui/JMetroLightTheme.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="763" column="47" selection-start="21675" selection-end="21675" vertical-scroll-proportion="0.0" vertical-offset="12574" max-vertical-offset="13447">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/gui/stage_elements/page/PageTemplateCreator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="20" selection-start="1458" selection-end="1458" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1445">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/gui/stage_elements/page/PageHolder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="102" selection-start="1440" selection-end="1440" vertical-scroll-proportion="0.21610169" vertical-offset="357" max-vertical-offset="1190">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/gui/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="19" column="0" selection-start="495" selection-end="495" vertical-scroll-proportion="0.2641243" vertical-offset="0" max-vertical-offset="748">
@@ -1217,37 +1050,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/gui/stage_elements/workarea/Canvas.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="19" selection-start="104" selection-end="104" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="221">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/gui/stage_elements/workarea/StartPagePane.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="66" column="1" selection-start="2150" selection-end="2150" vertical-scroll-proportion="1.4887005" vertical-offset="0" max-vertical-offset="1615">
           <folding>
             <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/gui/stage_elements/editor_elements/EditorElement.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="22" selection-start="214" selection-end="214" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="306">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/gui/stage_elements/page/Page.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="34" selection-start="989" selection-end="989" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="680">
-          <folding>
-            <element signature="e#746#905#0" expanded="true" />
-            <element signature="e#894#895#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1279,16 +1086,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/gui/config/Config.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="28" selection-start="718" selection-end="718" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="527">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/gui/stage_elements/editor_elements/ProcessorElement.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="68" selection-start="910" selection-end="910" vertical-scroll-proportion="0.0" vertical-offset="380" max-vertical-offset="1088">
+        <state line="31" column="68" selection-start="910" selection-end="910" vertical-scroll-proportion="0.27966103" vertical-offset="329" max-vertical-offset="1088">
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1278#1499#0" expanded="true" />
@@ -1301,14 +1101,101 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/gui/image/menu/back.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/gui/image/menu/previous_page.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/gui/stage_elements/workarea/EditorPane.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="53" column="20" selection-start="1736" selection-end="1736" vertical-scroll-proportion="0.6878531" vertical-offset="414" max-vertical-offset="3162">
+        <state line="30" column="39" selection-start="944" selection-end="944" vertical-scroll-proportion="0.0" vertical-offset="295" max-vertical-offset="2295">
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2135#3800#0" expanded="true" />
-            <element signature="e#3789#3790#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/gui/redactor/DataHolder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="23" selection-start="93" selection-end="93" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="221">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/gui/stage_elements/workarea/Canvas.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="87" column="22" selection-start="2966" selection-end="2966" vertical-scroll-proportion="0.0" vertical-offset="788" max-vertical-offset="1564">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1239#2910#0" expanded="true" />
+            <element signature="e#2899#2900#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/gui/stage_elements/page/PageHolder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="56" column="29" selection-start="2361" selection-end="2361" vertical-scroll-proportion="0.0" vertical-offset="648" max-vertical-offset="1530">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/gui/config/Config.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="28" selection-start="333" selection-end="333" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="561">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/gui/stage_elements/editor_elements/EditorElement.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="22" selection-start="214" selection-end="214" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="306">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/gui/image/menu/settings.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/gui/stage_elements/page/Page.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="53" selection-start="654" selection-end="654" vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="918">
+          <folding>
+            <element signature="e#746#905#0" expanded="true" />
+            <element signature="e#894#895#0" expanded="true" />
+            <element signature="e#1232#1373#0" expanded="true" />
+            <element signature="e#1362#1363#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/gui/image/menu/next_page.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/gui/stage_elements/page/PageTemplateCreator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="60" column="33" selection-start="1982" selection-end="1982" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1462">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/gui/JMetroLightTheme.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="723" column="0" selection-start="20452" selection-end="20452" vertical-scroll-proportion="0.6158192" vertical-offset="11855" max-vertical-offset="13192">
+          <folding />
         </state>
       </provider>
     </entry>

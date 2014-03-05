@@ -10,6 +10,8 @@ public class Config {
     public static final double DISTANCE_BETWEEN_LINKS = 0;
     public static final int SYSTEM_MENU_BUTTON_SIZE = 30;
 
+    public static final int PREVIOUS_NEXT_BUTTON_SIZE = 20;
+
     public static final int STATUS_HEADER_HEIGHT = 30;
     public static final int TOOL_HEIGHT = 50;
 
