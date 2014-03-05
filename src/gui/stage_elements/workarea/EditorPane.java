@@ -1,11 +1,20 @@
 package gui.stage_elements.workarea;
 
+
+import gui.stage_elements.editor_elements.ProcessorElement;
 import gui.utils.Utils;
+import javafx.event.EventHandler;
 import javafx.geometry.Insets;
+import javafx.geometry.Point2D;
 import javafx.geometry.Pos;
+import javafx.scene.Node;
 import javafx.scene.control.*;
 import javafx.scene.control.Button;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.*;
+import javafx.scene.paint.Color;
+import javafx.scene.shape.Rectangle;
+import javafx.scene.shape.RectangleBuilder;
 
 import static gui.config.Config.STATUS_HEADER_HEIGHT;
 import static gui.config.Config.TOOL_HEIGHT;
@@ -19,25 +28,94 @@ public class EditorPane extends WorkPane {
 
     private GridPane root;
     private ToolBar statusBar;
-    private ScrollPane scrollPane;
+    private ScrollPane canvasContainer;
     private Pane contentArea;
 
+    private ToggleButton cursorButton;
+    private ToggleButton addButton;
+    private ToggleButton linkButton;
+    private Button checkButton;
+
+    private Pane canvas;
+    private double initX;
+    private double initY;
+    private Point2D dragAnchor;
 
     public EditorPane(String cursorButtonId, String addButtonId, String linkButtonId, String checkButtonId) {
         root = new GridPane();
         setConstraints();
         addToolBar(cursorButtonId, addButtonId, linkButtonId, checkButtonId);
 
-        root.setGridLinesVisible(true);
+        canvasContainer = new ScrollPane();
+        canvasContainer.setHbarPolicy(ScrollPane.ScrollBarPolicy.AS_NEEDED);
+        canvasContainer.setVbarPolicy(ScrollPane.ScrollBarPolicy.AS_NEEDED);
 
+        root.setGridLinesVisible(true);
+        newCanvas();
+    }
+
+    public void newCanvas() {
+
+
+        root.add(canvasContainer, 0, 2);
+
+
+        canvas = new Pane();
+        Rectangle visibleCanvas = RectangleBuilder.create()
+                .width(1000).height(1000)
+                .fill(Color.AZURE)
+                .stroke(Color.BLACK)
+                .build();
+
+        canvas.getChildren().setAll(visibleCanvas);
+
+        canvas.setOnMouseClicked(new EventHandler<MouseEvent>() {
+            public void handle(MouseEvent me) {
+                if (addButton.isSelected()) {
+                    ProcessorElement processorElement = new ProcessorElement();
+
+                    final Node node = processorElement.getDrawable();
+                    node.setTranslateX(me.getX());
+                    node.setTranslateY(me.getY());
+
+                    node.setOnMousePressed(new EventHandler<MouseEvent>() {
+                        public void handle(MouseEvent me) {
+                            //when mouse is pressed, store initial position
+                            System.out.println("press");
+                            initX = node.getTranslateX();
+                            initY = node.getTranslateY();
+                            dragAnchor = new Point2D(me.getSceneX(), me.getSceneY());
+
+                        }
+                    });
+
+                    node.setOnMouseDragged(new EventHandler<MouseEvent>() {
+                        public void handle(MouseEvent me) {
+
+                            double dragX = me.getSceneX() - dragAnchor.getX();
+                            double dragY = me.getSceneY() - dragAnchor.getY();
+                            //calculate new position of the circle
+                            double newXPosition = initX + dragX;
+                            double newYPosition = initY + dragY;
+                            node.setTranslateX(newXPosition);
+                            node.setTranslateY(newYPosition);
+
+                        }
+                    });
+                    canvas.getChildren().add(node);
+                }
+
+            }
+        });
+
+
+        //variables for storing initial position before drag of circle
+        canvasContainer.setContent(canvas);
     }
 
     private void addToolBar(String cursorButtonId, String addButtonId, String linkButtonId, String checkButtonId) {
         BorderPane borderPane = new BorderPane();
-
         ToolBar toolBar = new ToolBar();
-        toolBar.setStyle("-fx-background-color: #f4f20c;-fx-border-color: #2c96f3; ");
-
 
         HBox box = new HBox();
         box.setPadding(new Insets(8));
@@ -46,10 +124,10 @@ public class EditorPane extends WorkPane {
 
         ToggleGroup toggleGroup = new ToggleGroup();
 
-        ToggleButton cursorButton = createButton(cursorButtonId, toggleGroup);
-        ToggleButton addButton = createButton(addButtonId, toggleGroup);
-        ToggleButton linkButton = createButton(linkButtonId, toggleGroup);
-        Button checkButton = createButton(checkButtonId);
+        cursorButton = createButton(cursorButtonId, toggleGroup);
+        addButton = createButton(addButtonId, toggleGroup);
+        linkButton = createButton(linkButtonId, toggleGroup);
+        checkButton = createButton(checkButtonId);
 
 
         cursorButton.setSelected(true);
@@ -59,7 +137,6 @@ public class EditorPane extends WorkPane {
         borderPane.setCenter(box);
 
         root.add(borderPane, 0, 3);
-
     }
 
     private ToggleButton createButton(String buttonId, ToggleGroup group) {
@@ -70,7 +147,6 @@ public class EditorPane extends WorkPane {
         button.setToggleGroup(group);
         return button;
     }
-
 
 
     private Button createButton(String buttonId) {
@@ -102,7 +178,8 @@ public class EditorPane extends WorkPane {
 
         root.getColumnConstraints().setAll(column);
     }
-@Override
+
+    @Override
     public GridPane getRoot() {
         return root;
     }

@@ -15,5 +15,11 @@ public class Config {
 
     public static final double LINK_WIDTH = ((SCENE_WIDTH - ANCHOR_OFFSET_WORK_AREA * 2) - DISTANCE_BETWEEN_LINKS * 2) / 3;
 
+    public static final int CANVAS_WIDTH = 600;
+    public static final int CANVAS_HEIGHT = 400;
+
+
+    public static final int PROCESSOR_ELEMENT_WIDTH = 40;
+    public static final int PROCESSOR_ELEMENT_HEIGHT = 40;
 
 }

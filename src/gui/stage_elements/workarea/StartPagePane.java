@@ -4,6 +4,7 @@ import gui.Main;
 import gui.stage_elements.page.Page;
 import javafx.event.EventHandler;
 import javafx.geometry.HPos;
+import javafx.geometry.VPos;
 import javafx.scene.control.Button;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.*;
@@ -67,11 +68,19 @@ public class StartPagePane extends WorkPane {
         Button modellerButton = createButton("ModellingLinkButton", Main.pageHolder.MODELLER_PAGE);
         Button statisticsButton = createButton("StatisticsLinkButton", Main.pageHolder.STATISTICS_PAGE);
 
+        gridForLinks.setHgap(30);
+        gridForLinks.setVgap(30);
 
-        GridPane.setHalignment(editProcessorsButton, HPos.CENTER);
-        GridPane.setHalignment(editTaskButton, HPos.CENTER);
-        GridPane.setHalignment(modellerButton, HPos.CENTER);
-        GridPane.setHalignment(statisticsButton, HPos.CENTER);
+        GridPane.setHalignment(editProcessorsButton, HPos.RIGHT);
+        GridPane.setHalignment(editTaskButton, HPos.LEFT);
+        GridPane.setHalignment(modellerButton, HPos.RIGHT);
+        GridPane.setHalignment(statisticsButton, HPos.LEFT);
+
+
+        GridPane.setValignment(editProcessorsButton, VPos.BOTTOM);
+        GridPane.setValignment(editTaskButton, VPos.BOTTOM);
+        GridPane.setValignment(modellerButton, VPos.TOP);
+        GridPane.setValignment(statisticsButton, VPos.TOP);
 
         gridForLinks.add(editProcessorsButton, 0, 0);
         gridForLinks.add(editTaskButton, 1, 0);
