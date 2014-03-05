@@ -1,4 +1,4 @@
-package gui.stage_elements.pages.template.workarea;
+package gui.stage_elements.workarea;
 
 import javafx.scene.control.Label;
 import javafx.scene.layout.BorderPane;

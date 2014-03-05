@@ -1,6 +1,6 @@
-package gui.stage_elements.pages.template;
+package gui.stage_elements.workarea;
 
-import gui.stage_elements.Utils;
+import gui.utils.Utils;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.control.*;
@@ -13,23 +13,26 @@ import static gui.config.Config.TOOL_HEIGHT;
 /**
  * Created by Nightingale on 20.02.14.
  */
-public class EditorAreaTemplate {
+public class EditorPane extends WorkPane {
+    private static final String CURSOR_BUTTON_ID = "CursorButton";
+    private static final String CHECK_BUTTON_ID = "CheckButton";
+
     private GridPane root;
     private ToolBar statusBar;
     private ScrollPane scrollPane;
     private Pane contentArea;
 
 
-    public EditorAreaTemplate(String cursorButtonId, String addButtonId, String linkButtonId) {
+    public EditorPane(String cursorButtonId, String addButtonId, String linkButtonId, String checkButtonId) {
         root = new GridPane();
         setConstraints();
-        addToolBar(cursorButtonId, addButtonId, linkButtonId);
+        addToolBar(cursorButtonId, addButtonId, linkButtonId, checkButtonId);
 
         root.setGridLinesVisible(true);
 
     }
 
-    private void addToolBar(String cursorButtonId, String addButtonId, String linkButtonId) {
+    private void addToolBar(String cursorButtonId, String addButtonId, String linkButtonId, String checkButtonId) {
         BorderPane borderPane = new BorderPane();
 
         ToolBar toolBar = new ToolBar();
@@ -46,10 +49,12 @@ public class EditorAreaTemplate {
         ToggleButton cursorButton = createButton(cursorButtonId, toggleGroup);
         ToggleButton addButton = createButton(addButtonId, toggleGroup);
         ToggleButton linkButton = createButton(linkButtonId, toggleGroup);
+        Button checkButton = createButton(checkButtonId);
+
 
         cursorButton.setSelected(true);
 
-        box.getChildren().setAll(cursorButton, addButton, linkButton);
+        box.getChildren().setAll(cursorButton, addButton, linkButton, checkButton);
         toolBar.getItems().addAll(box);
         borderPane.setCenter(box);
 
@@ -63,6 +68,16 @@ public class EditorAreaTemplate {
         button.setPrefSize(40, 40);
         button.setMinSize(40, 40);
         button.setToggleGroup(group);
+        return button;
+    }
+
+
+
+    private Button createButton(String buttonId) {
+        Button button = new Button();
+        button.setId(buttonId);
+        button.setPrefSize(40, 40);
+        button.setMinSize(40, 40);
         return button;
     }
 
@@ -87,7 +102,7 @@ public class EditorAreaTemplate {
 
         root.getColumnConstraints().setAll(column);
     }
-
+@Override
     public GridPane getRoot() {
         return root;
     }

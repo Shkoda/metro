@@ -1,7 +1,7 @@
-package gui.stage_elements.pages.template.workarea;
+package gui.stage_elements.workarea;
 
 import gui.Main;
-import gui.stage_elements.pages.PageNewEdition;
+import gui.stage_elements.page.Page;
 import javafx.event.EventHandler;
 import javafx.geometry.HPos;
 import javafx.scene.control.Button;
@@ -49,7 +49,7 @@ public class StartPagePane extends WorkPane {
         root.getChildren().setAll(gridForLinks);
     }
 
-    private Button createButton(String fxId, final PageNewEdition goToPage) {
+    private Button createButton(String fxId, final Page goToPage) {
         Button button = new Button();
         button.setId(fxId);
         button.setOnMouseClicked(new EventHandler<MouseEvent>() {
@@ -62,10 +62,10 @@ public class StartPagePane extends WorkPane {
 
     private void addLinkButtons() {
 
-        Button editProcessorsButton = createButton("EditProcessorLinkButton", Main.pages.EDIT_MPP_PAGE);
-        Button editTaskButton = createButton("EditTasksLinkButton", Main.pages.EDIT_TASKS_PAGE);
-        Button modellerButton = createButton("ModellingLinkButton", Main.pages.MODELLER_PAGE);
-        Button statisticsButton = createButton("StatisticsLinkButton", Main.pages.STATISTICS_PAGE);
+        Button editProcessorsButton = createButton("EditProcessorLinkButton", Main.pageHolder.EDIT_MPP_PAGE);
+        Button editTaskButton = createButton("EditTasksLinkButton", Main.pageHolder.EDIT_TASKS_PAGE);
+        Button modellerButton = createButton("ModellingLinkButton", Main.pageHolder.MODELLER_PAGE);
+        Button statisticsButton = createButton("StatisticsLinkButton", Main.pageHolder.STATISTICS_PAGE);
 
 
         GridPane.setHalignment(editProcessorsButton, HPos.CENTER);
