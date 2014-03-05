@@ -1,8 +1,7 @@
 package gui;
 
-import gui.stage_elements.LinkPane;
-import gui.stage_elements.pages.PageWithContent;
-import gui.stage_elements.pages.template.PageBuilder;
+import gui.stage_elements.pages.PageNewEdition;
+import gui.stage_elements.pages.Pages;
 import javafx.application.Application;
 import javafx.scene.Node;
 import javafx.scene.Scene;
@@ -17,9 +16,15 @@ import static gui.config.Config.*;
 public class Main extends Application {
 
     private Pane pageArea;
-    private PageWithContent currentPage;
+
     private Node currentPageView;
-    private Stage stage;
+    private static Stage stage;
+    private static AnchorPane root;
+
+    public static Pages pages = new Pages();
+    static {
+        pages.init();
+    }
 
     public static void main(String[] args) {
         Application.launch(args);
@@ -27,37 +32,42 @@ public class Main extends Application {
 
     @Override
     public void start(Stage stage) throws Exception {
+        Main.stage = stage;
+
         stage.setTitle("Metro style");
-        AnchorPane root = new AnchorPane();
+        root = new AnchorPane();
         stage.setMinHeight(SCENE_HEIGHT);
         stage.setMinWidth(SCENE_WIDTH);
 
-        Pane linkPane = LinkPane.createLinkPane();
+//        PageTemplate pageTemplate = new PageTemplate("Start Page");
+//        //   pageTemplate.setWorkPane(new EditorPane("CursorButton", "AddProcessorButton", "LinkButton", "CheckButton"));
+//        pageTemplate.setWorkPane(new StartPagePane());
+//        GridPane gridPane = pageTemplate.getTemplate();
+//
+//
+//        gridPane.minWidthProperty().bind(root.widthProperty());
+//        gridPane.minHeightProperty().bind(root.heightProperty());
+//
+//        root.getChildren().setAll(gridPane);
 
-        GridPane gridPane = PageBuilder.createEmptyTemplate();
-        PageBuilder.addBackButton(gridPane);
-        PageBuilder.setPageName(gridPane, "Start Page");
-        PageBuilder.addWorkArea(gridPane, linkPane);
-        PageBuilder.addSettingsButton(gridPane);
-
-        gridPane.minWidthProperty().bind(root.widthProperty());
-        gridPane.minHeightProperty().bind(root.heightProperty());
-
-        root.getChildren().setAll(gridPane);
 
         Scene scene = new Scene(root, SCENE_WIDTH, SCENE_HEIGHT, true);
         stage.setScene(scene);
         scene.getStylesheets().add(Main.class.getResource("JMetroLightTheme.css").toExternalForm());
 
+        goTo(pages.START_PAGE);
         stage.show();
 
     }
 
-    public void goToPage(PageWithContent page) {
-        Node view = page.createView();
-        if (view == null) view = new Region();
-        pageArea.getChildren().setAll(view);
-        currentPageView = view;
-        currentPage = page;
+    public static void goTo(PageNewEdition pageTemplate) {
+        GridPane gridPane = pageTemplate.getTemplate();
+
+        gridPane.minWidthProperty().bind(root.widthProperty());
+        gridPane.minHeightProperty().bind(root.heightProperty());
+
+        root.getChildren().setAll(gridPane);
     }
+
+
 }

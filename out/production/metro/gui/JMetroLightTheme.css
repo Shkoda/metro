@@ -85,6 +85,7 @@
     -fx-background-color: #219297;
 }
 
+
 #window_button {
     -fx-background-color: rgba(255, 255, 255, 0);
 }
@@ -118,10 +119,10 @@
 
 .toggle-button {
     -fx-padding: 5 22 5 22;
-    -fx-border-style: null;
+
     -fx-background-radius: 0;
 
-    -fx-background-color: #cccccc;
+    -fx-background-color: #f7f7f7;
 
     -fx-font-family: "Segoe UI", Helvetica, Arial, sans-serif;
     -fx-font-size: 11pt;
@@ -129,25 +130,29 @@
 }
 
 .toggle-button:focused {
-    -fx-border-color: black;
+    -fx-border-color: #18b0ff;
     -fx-border-width: 1;
     -fx-border-style: segments(1, 1);
     -fx-background-insets: 0 0 0 0, 0, 1, 2;
 }
 
 .toggle-button:hover {
-    -fx-background-color: #d8d8d8;
+    -fx-background-color: #18b0ff;
     -fx-text-fill: black;
 }
 
 .toggle-button:selected {
-    -fx-background-color: black;
+    -fx-background-color: #0ece52;
     -fx-text-fill: white;
 }
 
 .toggle-button:selected:hover {
-    -fx-background-color: #666;
+    -fx-background-color: #0ece52;
     -fx-text-fill: white;
+}
+
+.toggle-button:pressed{
+    -fx-background-color: #0eb34c;
 }
 
 .toggle-button:disabled {
@@ -698,18 +703,84 @@
     -fx-text-fill: white;
 }
 
+/*#page-toolbar #SettingsButton {*/
+
+    /*-fx-background-image: url("scene_elements/images/settings.png");*//**//*--------------------------<<<<<*/
+    /*-fx-border-color: transparent transparent transparent #6e737d , transparent transparent transparent rgba(255,255,255,0.3);*/
+    /*-fx-border-insets: 0, 0 1 0 1;*/
+/*}*/
+
+/*#SettingsButton:hover{*/
+    /*-fx-effect: dropshadow( three-pass-box , rgba(255,255,255,0.6) , 10, 0.5 , 0 , 0 );*/
+/*}*/
+
+/*#SettingsButton:selected{*/
+    /*-fx-effect: dropshadow( three-pass-box , rgba(255, 72, 116, 0.60), 10, 0.5 , 0 , 0 );*/
+/*}*/
+
+
+#page-toolbar .button:focused, #page-toolbar #SettingsButton:focused  {
+    -fx-border-color: -fx-focus-color;
+    -fx-border-width: 1.4;
+}
+
+#AddProcessorButton {
+    -fx-background-image: url("image/redactor/add.png");
+    -fx-background-size: 40 40;
+}
+
+
+/*#SettingsButton {*/
+    /*-fx-graphic: url("image/menu/settings.png");*/
+    /*-fx-background-color: transparent;*/
+    /*-fx-background-repeat: no-repeat;*/
+    /*-fx-background-position: center;*/
+    /*-fx-background-size: 30 30;*/
+/*}*/
+
+
+/*#SettingsButton .button:hover {*/
+    /*-fx-background-color: #18b0ff;*/
+/*}*/
+
+/*#SettingsButton .button:pressed, .button:default:hover:pressed {*/
+    /*-fx-background-color: #0ece52;*/
+    /*-fx-text-fill: white;*/
+/*}*/
+
 #SettingsButton {
-    -fx-graphic: url("image/menu/settings.png");
-    -fx-background-color: transparent;
+    -fx-background-image: url("image/menu/settings.png");
+    -fx-background-size: 20 20;
     -fx-background-repeat: no-repeat;
-    -fx-background-position: center;
+   -fx-background-position: center;
+    -fx-background-color: transparent;
 }
 
-#SettingsButton .button:hover {
-    -fx-background-color: #18b0ff;
+#SettingsButton .menu-button .arrow {
+    -fx-background-color:  rgba(0, 0, 0, 0);
 }
 
-#SettingsButton .button:pressed, .button:default:hover:pressed {
-    -fx-background-color: #0ece52;
-    -fx-text-fill: white;
+#CursorButton {
+    -fx-background-image: url("image/redactor/cursor.png");
+    -fx-background-size: 40 40;
+}
+
+#AddProcessorButton {
+    -fx-background-image: url("image/redactor/add.png");
+    -fx-background-size: 40 40;
+}
+
+#AddTaskButton {
+    -fx-background-image: url("image/redactor/add.png");
+    -fx-background-size: 40 40;
+}
+
+#LinkButton {
+    -fx-background-image: url("image/redactor/link_task.png");
+    -fx-background-size: 40 40;
+}
+
+#CheckButton {
+    -fx-background-image: url("image/redactor/check.png");
+    -fx-background-size: 40 40;
 }
